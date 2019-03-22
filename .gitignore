@@ -47,6 +47,9 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+# Ignore dist
+dist
+
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
