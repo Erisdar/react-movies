@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailFilmInfo component should be render correctly 1`] = `
+<_default
+  film={
+    Object {
+      "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+      "duration": "111",
+      "genre": "Action & Adventure",
+      "id": "1",
+      "logo": "kill-bill-v1.jpg",
+      "rating": "8.1",
+      "title": "Kill Bill vol 1",
+      "year": "2003",
+    }
+  }
+>
+  <div
+    className="detail-film-info content__detail-film-info d-flex justify-content-around flex-wrap flex-md-row flex-column align-items-center align-self-center"
+  >
+    <Button
+      active={false}
+      className="ml-auto detail-film-info__search-button"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      variant="outline-primary"
+    >
+      <button
+        className="ml-auto detail-film-info__search-button btn btn-outline-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Search
+      </button>
+    </Button>
+    <div
+      className="detail-film-info__image"
+    >
+      <_default
+        logo="kill-bill-v1.jpg"
+      >
+        <img
+          className="film-item__film-image"
+          src="test-file-stub"
+        />
+      </_default>
+    </div>
+    <div
+      className="detail-film-info__info d-flex flex-column text-justify"
+    >
+      <div
+        className="d-flex font-weight-bold flex-wrap align-items-center justify-content-between"
+      >
+        <p
+          className="detail-film-info__title detail-film-info__indent"
+        >
+          Kill Bill vol 1
+        </p>
+        <p
+          className="detail-film-info__rating"
+        >
+          8.1
+        </p>
+      </div>
+      <div
+        className="d-flex font-weight-bold detail-film-info__indent"
+      >
+        <p>
+          2003
+        </p>
+        <p>
+          111
+           min
+        </p>
+      </div>
+      <p
+        className="detail-film-info__indent m-0"
+      >
+        The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.
+      </p>
+    </div>
+  </div>
+</_default>
+`;

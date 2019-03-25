@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should be render correctly 1`] = `
+<div
+  className="footer app__footer"
+>
+  <_default
+    className="footer__brand-title brand-title_color-red"
+  />
+</div>
+`;

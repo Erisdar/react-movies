@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Film item component should be render correctly with FilmImage 1`] = `
+<_default
+  film={
+    Object {
+      "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+      "duration": "111",
+      "genre": "Action & Adventure",
+      "id": "1",
+      "logo": "kill-bill-v1.jpg",
+      "rating": "8.1",
+      "title": "Kill Bill vol 1",
+      "year": "2003",
+    }
+  }
+>
+  <div
+    className="film-item film-list__film-item d-flex flex-column justify-content-start"
+  >
+    <div
+      className="logo-container film-item__logo-container"
+      onClick={[Function]}
+    >
+      <ImageErrorBoundary>
+        <$default
+          alt="Kill Bill vol 1"
+          logo="kill-bill-v1.jpg"
+        >
+          <img
+            alt="Kill Bill vol 1"
+            className="film-logo"
+            src="test-file-stub"
+          />
+        </$default>
+      </ImageErrorBoundary>
+    </div>
+    <_default
+      genre="Action & Adventure"
+      title="Kill Bill vol 1"
+      year="2003"
+    >
+      <div
+        className="d-flex flex-column h-100 justify-content-between film-info film-item__film-info"
+      >
+        <div
+          className="d-flex justify-content-between align-items-start"
+        >
+          <p
+            className="film-info__title"
+            data-cy="film-info-title"
+          >
+            Kill Bill vol 1
+          </p>
+          <p
+            className="fiml-info__year"
+          >
+            2003
+          </p>
+        </div>
+        <div
+          className="h-50"
+        >
+          <p
+            className="film-info__genre"
+            data-cy="film-info-genre"
+          >
+            Action & Adventure
+          </p>
+        </div>
+      </div>
+    </_default>
+  </div>
+</_default>
+`;
+
+exports[`Film item component should be render correctly with ImageErrorBoundary 1`] = `
+<_default
+  film={
+    Object {
+      "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+      "duration": "111",
+      "genre": "Action & Adventure",
+      "id": "1",
+      "logo": "kill-bill-v1.jpg",
+      "rating": "8.1",
+      "title": "Kill Bill vol 1",
+      "year": "2003",
+    }
+  }
+>
+  <div
+    className="film-item film-list__film-item d-flex flex-column justify-content-start"
+  >
+    <div
+      className="logo-container film-item__logo-container"
+      onClick={[Function]}
+    >
+      <ImageErrorBoundary>
+        <img
+          className="film-item__film-image"
+          src="test-file-stub"
+        />
+      </ImageErrorBoundary>
+    </div>
+    <_default
+      genre="Action & Adventure"
+      title="Kill Bill vol 1"
+      year="2003"
+    >
+      <div
+        className="d-flex flex-column h-100 justify-content-between film-info film-item__film-info"
+      >
+        <div
+          className="d-flex justify-content-between align-items-start"
+        >
+          <p
+            className="film-info__title"
+            data-cy="film-info-title"
+          >
+            Kill Bill vol 1
+          </p>
+          <p
+            className="fiml-info__year"
+          >
+            2003
+          </p>
+        </div>
+        <div
+          className="h-50"
+        >
+          <p
+            className="film-info__genre"
+            data-cy="film-info-genre"
+          >
+            Action & Adventure
+          </p>
+        </div>
+      </div>
+    </_default>
+  </div>
+</_default>
+`;
