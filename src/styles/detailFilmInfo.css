@@ -1,0 +1,53 @@
+.detail-view {
+    color: white;
+    margin: 1% 0px;
+    background-color: rgba(49, 48, 48, 0.4);
+    width: 1000px;
+    padding: 1% 0;
+    position: relative;
+}
+
+.film-big-logo {
+    height: 400px;
+    width: 300px;
+}
+
+.film-detail-info-container {
+    width: 600px;
+}
+
+.detail-view .search-button {
+    position: absolute;
+    top: -35px;
+    right: 25px;
+}
+
+.film-detailt-title {
+    color: rgb(211, 48, 48);
+    font-size: 36px;
+    max-width: 500px;
+}
+
+.film-rating {
+    color: rgb(125, 177, 125);
+    font-size: 30px;
+    border: 2px solid rgb(125, 177, 125);
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.info-text-indent {
+    text-indent: 20px;
+}
+
+@media (max-width:1020px) {
+    .detail-view {
+        width: 90%;
+    }
+
+    .film-detail-info-container {
+        width: 95%;
+    }
+
+}

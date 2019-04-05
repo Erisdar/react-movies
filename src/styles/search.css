@@ -1,0 +1,26 @@
+.search {
+    padding: 15px 20%;
+    height: auto;
+    color: white;
+}
+
+.search-button-group {
+    margin-top: 30px;
+}
+
+.search-type-button {
+    margin-left: 20px;
+}
+
+.find-movie-text {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.active-button-type {
+    background-color: brown;
+}
+
+.non-active-button-type {
+    background-color: grey;
+}
