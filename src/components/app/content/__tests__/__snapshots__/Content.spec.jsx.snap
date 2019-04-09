@@ -1,0 +1,454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content component should be render correctly with ErrorBoundary 1`] = `
+<Content>
+  <div
+    className="content d-flex flex-column mb-auto"
+  >
+    <Search
+      onSearch={[Function]}
+    >
+      <div
+        className="search content__search"
+      >
+        <_default>
+          <p
+            className="find-movie-text"
+          >
+            FIND YOUR MOVIE
+          </p>
+        </_default>
+        <Bootstrap(InputGroup)
+          className="mb-15"
+        >
+          <InputGroup
+            as="div"
+            bsPrefix="input-group"
+            className="mb-15"
+          >
+            <div
+              className="mb-15 input-group"
+            >
+              <FormControl
+                aria-describedby="basic-addon1"
+                aria-label="Film"
+                as="input"
+                className="search__film-input"
+                data-cy="input"
+                onInput={[Function]}
+                placeholder="Film"
+              >
+                <input
+                  aria-describedby="basic-addon1"
+                  aria-label="Film"
+                  className="search__film-input form-control"
+                  data-cy="input"
+                  onInput={[Function]}
+                  placeholder="Film"
+                />
+              </FormControl>
+            </div>
+          </InputGroup>
+        </Bootstrap(InputGroup)>
+        <_default
+          changeSearchType={[Function]}
+          search={[Function]}
+          searchType="title"
+        >
+          <div
+            className="d-flex justify-content-center align-items-center search-button-group search__search-button-group"
+          >
+            <p>
+              SEARCH BY
+            </p>
+            <Button
+              active={false}
+              className="search-button-group__title search-button-group__title_active"
+              data-cy="title"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__title search-button-group__title_active btn btn-primary"
+                data-cy="title"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                TITLE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__genre search-button-group__genre_non-active"
+              data-cy="genre"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__genre search-button-group__genre_non-active btn btn-primary"
+                data-cy="genre"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                GENRE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__search ml-auto"
+              data-cy="search"
+              disabled={false}
+              onClick={[Function]}
+              size="lg"
+              type="submit"
+              variant="danger"
+            >
+              <button
+                className="search-button-group__search ml-auto btn btn-danger btn-lg"
+                data-cy="search"
+                disabled={false}
+                onClick={[Function]}
+                type="submit"
+              >
+                SEARCH
+              </button>
+            </Button>
+          </div>
+        </_default>
+      </div>
+    </Search>
+    <ErrorBoundary>
+      <div
+        className="film-list content__film-list d-flex align-self-center flex-column justify-content-start"
+      >
+        <h1>
+          Sorry, server is not responding now
+        </h1>
+      </div>
+    </ErrorBoundary>
+  </div>
+</Content>
+`;
+
+exports[`Content component should be render correctly with film not found 1`] = `
+<Content>
+  <div
+    className="content d-flex flex-column mb-auto"
+  >
+    <Search
+      onSearch={[Function]}
+    >
+      <div
+        className="search content__search"
+      >
+        <_default>
+          <p
+            className="find-movie-text"
+          >
+            FIND YOUR MOVIE
+          </p>
+        </_default>
+        <Bootstrap(InputGroup)
+          className="mb-15"
+        >
+          <InputGroup
+            as="div"
+            bsPrefix="input-group"
+            className="mb-15"
+          >
+            <div
+              className="mb-15 input-group"
+            >
+              <FormControl
+                aria-describedby="basic-addon1"
+                aria-label="Film"
+                as="input"
+                className="search__film-input"
+                data-cy="input"
+                onInput={[Function]}
+                placeholder="Film"
+              >
+                <input
+                  aria-describedby="basic-addon1"
+                  aria-label="Film"
+                  className="search__film-input form-control"
+                  data-cy="input"
+                  onInput={[Function]}
+                  placeholder="Film"
+                />
+              </FormControl>
+            </div>
+          </InputGroup>
+        </Bootstrap(InputGroup)>
+        <_default
+          changeSearchType={[Function]}
+          search={[Function]}
+          searchType="title"
+        >
+          <div
+            className="d-flex justify-content-center align-items-center search-button-group search__search-button-group"
+          >
+            <p>
+              SEARCH BY
+            </p>
+            <Button
+              active={false}
+              className="search-button-group__title search-button-group__title_active"
+              data-cy="title"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__title search-button-group__title_active btn btn-primary"
+                data-cy="title"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                TITLE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__genre search-button-group__genre_non-active"
+              data-cy="genre"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__genre search-button-group__genre_non-active btn btn-primary"
+                data-cy="genre"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                GENRE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__search ml-auto"
+              data-cy="search"
+              disabled={false}
+              onClick={[Function]}
+              size="lg"
+              type="submit"
+              variant="danger"
+            >
+              <button
+                className="search-button-group__search ml-auto btn btn-danger btn-lg"
+                data-cy="search"
+                disabled={false}
+                onClick={[Function]}
+                type="submit"
+              >
+                SEARCH
+              </button>
+            </Button>
+          </div>
+        </_default>
+      </div>
+    </Search>
+    <ErrorBoundary>
+      <_default
+        changeView={[Function]}
+        films={Array []}
+      >
+        <div
+          className="film-list content__film-list align-self-center d-flex flex-row justify-content-around flex-wrap"
+        >
+          <_default>
+            <p
+              className="film-list__no-films"
+            >
+              No Films Found
+            </p>
+          </_default>
+        </div>
+      </_default>
+    </ErrorBoundary>
+  </div>
+</Content>
+`;
+
+exports[`Content component should be render correctly with films 1`] = `
+<Content>
+  <div
+    className="content d-flex flex-column mb-auto"
+  >
+    <Search
+      onSearch={[Function]}
+    >
+      <div
+        className="search content__search"
+      >
+        <_default>
+          <p
+            className="find-movie-text"
+          >
+            FIND YOUR MOVIE
+          </p>
+        </_default>
+        <Bootstrap(InputGroup)
+          className="mb-15"
+        >
+          <InputGroup
+            as="div"
+            bsPrefix="input-group"
+            className="mb-15"
+          >
+            <div
+              className="mb-15 input-group"
+            >
+              <FormControl
+                aria-describedby="basic-addon1"
+                aria-label="Film"
+                as="input"
+                className="search__film-input"
+                data-cy="input"
+                onInput={[Function]}
+                placeholder="Film"
+              >
+                <input
+                  aria-describedby="basic-addon1"
+                  aria-label="Film"
+                  className="search__film-input form-control"
+                  data-cy="input"
+                  onInput={[Function]}
+                  placeholder="Film"
+                />
+              </FormControl>
+            </div>
+          </InputGroup>
+        </Bootstrap(InputGroup)>
+        <_default
+          changeSearchType={[Function]}
+          search={[Function]}
+          searchType="title"
+        >
+          <div
+            className="d-flex justify-content-center align-items-center search-button-group search__search-button-group"
+          >
+            <p>
+              SEARCH BY
+            </p>
+            <Button
+              active={false}
+              className="search-button-group__title search-button-group__title_active"
+              data-cy="title"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__title search-button-group__title_active btn btn-primary"
+                data-cy="title"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                TITLE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__genre search-button-group__genre_non-active"
+              data-cy="genre"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="primary"
+            >
+              <button
+                className="search-button-group__genre search-button-group__genre_non-active btn btn-primary"
+                data-cy="genre"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                GENRE
+              </button>
+            </Button>
+            <Button
+              active={false}
+              className="search-button-group__search ml-auto"
+              data-cy="search"
+              disabled={false}
+              onClick={[Function]}
+              size="lg"
+              type="submit"
+              variant="danger"
+            >
+              <button
+                className="search-button-group__search ml-auto btn btn-danger btn-lg"
+                data-cy="search"
+                disabled={false}
+                onClick={[Function]}
+                type="submit"
+              >
+                SEARCH
+              </button>
+            </Button>
+          </div>
+        </_default>
+      </div>
+    </Search>
+    <ErrorBoundary>
+      <_default
+        changeView={[Function]}
+        films={
+          Array [
+            Object {
+              "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+              "duration": "111",
+              "genre": "Action & Adventure",
+              "id": "1",
+              "logo": "kill-bill-v1.jpg",
+              "rating": "8.1",
+              "title": "Kill Bill vol 1",
+              "year": "2003",
+            },
+          ]
+        }
+      >
+        <div
+          className="film-list content__film-list align-self-center d-flex flex-row justify-content-around flex-wrap"
+        >
+          <mockConstructor
+            film={
+              Object {
+                "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+                "duration": "111",
+                "genre": "Action & Adventure",
+                "id": "1",
+                "logo": "kill-bill-v1.jpg",
+                "rating": "8.1",
+                "title": "Kill Bill vol 1",
+                "year": "2003",
+              }
+            }
+            key="1"
+            moreDetail={[Function]}
+          >
+            <div
+              id="filmItem1"
+              onClick={[Function]}
+            />
+          </mockConstructor>
+        </div>
+      </_default>
+    </ErrorBoundary>
+  </div>
+</Content>
+`;

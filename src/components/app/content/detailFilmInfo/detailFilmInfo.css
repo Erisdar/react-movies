@@ -1,0 +1,56 @@
+.detail-film-info {
+    color: white;
+    background-color: rgba(49, 48, 48, 0.4);
+}
+
+.content__detail-film-info {
+    width: 1000px;
+    padding: 1% 0;
+    position: relative;
+    margin: 1% 0px;
+}
+
+.detail-film-info__image {
+    height: 400px;
+    width: 300px;
+}
+
+.detail-film-info__info {
+    width: 600px;
+}
+
+.detail-film-info__search-button {
+    position: absolute;
+    top: -35px;
+    right: 25px;
+}
+
+.detail-film-info__title {
+    color: rgb(211, 48, 48);
+    font-size: 36px;
+    max-width: 500px;
+}
+
+.detail-film-info__rating {
+    color: rgb(125, 177, 125);
+    font-size: 30px;
+    border: 2px solid rgb(125, 177, 125);
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.detail-film-info__indent {
+    text-indent: 20px;
+}
+
+@media (max-width:1020px) {
+    .detail-film-info {
+        width: 90%;
+    }
+
+    .detail-film-info__info {
+        width: 95%;
+    }
+
+}

@@ -1,0 +1,14 @@
+.film-item__film-info {
+    margin-top: 5px;
+}
+
+.film-info__year {
+    border: 1px groove black;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.film-info__genre {
+    font-size: 12px;
+}

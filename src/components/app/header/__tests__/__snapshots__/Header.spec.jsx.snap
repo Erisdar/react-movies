@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should be render correctly 1`] = `
+<div
+  className="header justify-content-center"
+>
+  <_default
+    className="header__brand-title brand-title_color-red"
+  />
+</div>
+`;

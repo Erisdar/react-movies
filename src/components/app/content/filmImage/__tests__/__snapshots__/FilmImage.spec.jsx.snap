@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Film image component should be render correctly 1`] = `
+<img
+  alt="HarryPotter"
+  className="film-item__film-image"
+  src="test-file-stub"
+/>
+`;

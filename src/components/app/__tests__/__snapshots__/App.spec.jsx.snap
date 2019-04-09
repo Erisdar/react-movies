@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer component should be render correctly 1`] = `
+<Fragment>
+  <_default />
+  <Content />
+  <_default />
+</Fragment>
+`;

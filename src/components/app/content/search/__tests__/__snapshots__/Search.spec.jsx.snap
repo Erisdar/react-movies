@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should be render correctly 1`] = `
+<Search>
+  <div
+    className="search content__search"
+  >
+    <_default>
+      <p
+        className="find-movie-text"
+      >
+        FIND YOUR MOVIE
+      </p>
+    </_default>
+    <Bootstrap(InputGroup)
+      className="mb-15"
+    >
+      <InputGroup
+        as="div"
+        bsPrefix="input-group"
+        className="mb-15"
+      >
+        <div
+          className="mb-15 input-group"
+        >
+          <FormControl
+            aria-describedby="basic-addon1"
+            aria-label="Film"
+            as="input"
+            className="search__film-input"
+            data-cy="input"
+            onInput={[Function]}
+            placeholder="Film"
+          >
+            <input
+              aria-describedby="basic-addon1"
+              aria-label="Film"
+              className="search__film-input form-control"
+              data-cy="input"
+              onInput={[Function]}
+              placeholder="Film"
+            />
+          </FormControl>
+        </div>
+      </InputGroup>
+    </Bootstrap(InputGroup)>
+    <_default
+      changeSearchType={[Function]}
+      search={[Function]}
+      searchType="title"
+    >
+      <div
+        className="d-flex justify-content-center align-items-center search-button-group search__search-button-group"
+      >
+        <p>
+          SEARCH BY
+        </p>
+        <Button
+          active={false}
+          className="search-button-group__title search-button-group__title_active"
+          data-cy="title"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          <button
+            className="search-button-group__title search-button-group__title_active btn btn-primary"
+            data-cy="title"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            TITLE
+          </button>
+        </Button>
+        <Button
+          active={false}
+          className="search-button-group__genre search-button-group__genre_non-active"
+          data-cy="genre"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          <button
+            className="search-button-group__genre search-button-group__genre_non-active btn btn-primary"
+            data-cy="genre"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            GENRE
+          </button>
+        </Button>
+        <Button
+          active={false}
+          className="search-button-group__search ml-auto"
+          data-cy="search"
+          disabled={false}
+          onClick={[Function]}
+          size="lg"
+          type="submit"
+          variant="danger"
+        >
+          <button
+            className="search-button-group__search ml-auto btn btn-danger btn-lg"
+            data-cy="search"
+            disabled={false}
+            onClick={[Function]}
+            type="submit"
+          >
+            SEARCH
+          </button>
+        </Button>
+      </div>
+    </_default>
+  </div>
+</Search>
+`;

@@ -1,0 +1,14 @@
+.footer {
+    background-color: rgb(53, 52, 52);
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.app__footer{
+    padding: 10px 10px 10px 30px;
+    margin: 0;
+}
+
+.footer__brand-title {
+    margin: 0px;
+}
