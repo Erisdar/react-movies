@@ -1,0 +1,1 @@
+export const LOAD_FILMS = "https://reactjs-cdp.herokuapp.com/movies";

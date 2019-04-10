@@ -1,71 +1,62 @@
+import { BRIEFLY, DETAIL } from 'constants/view';
 import { mount } from 'enzyme';
 import React from 'react';
-import { filterFilm } from 'util/filmUtil';
 import Content from '../Content';
-import FilmItem from '../filmList/filmItem/FilmItem';
+import FilmList from '../filmList/FilmListContainer';
 
-jest.mock('../filmList/filmItem/FilmItem', () => {
-    return jest.fn().mockImplementation(({ film, moreDetail }) => {
-        return (<div id={'filmItem' + film.id} onClick={() => moreDetail()}></div>)
+jest.mock('../search/SearchContainer', () => {
+    return jest.fn().mockImplementation(() => {
+        return (<div className='content__search'></div>)
     });
 });
-jest.mock('../detailFilmInfo/DetailFilmInfo.jsx', () => {
-    return jest.fn().mockImplementation(({ film, changeView }) => {
-        return (<div id={'detailInfo' + film.id} onClick={() => changeView()}></div>)
+
+jest.mock('../filmList/FilmListContainer', () => {
+    return jest.fn().mockImplementation(() => {
+        return (<div className='content__film-list'></div>)
     });
 });
-jest.mock('util/filmUtil', () => ({
-    __esModule: true,
-    filterFilm: jest.fn().mockImplementation(films => films.filter(film => film.id === "1"))
-}));
 
-const testFilm = require('data/film.json').find(film => film.id === "1");
+jest.mock('../detailFilmInfo/DetailFilmInfoContainer', () => {
+    return jest.fn().mockImplementation(() => {
+        return (<div className='content__detail-film-info'></div>)
+    });
+});
+
+const films = require('data/film.json').filter(film => film.id == 1);
 
 describe('Content component', () => {
-    beforeEach(() => {
-        FilmItem.mockClear();
-        filterFilm.mockClear();
-    });
 
-    it('should be render correctly with film not found', () => {
-        filterFilm
-            .mockImplementationOnce(() => [])
-            .mockImplementationOnce(() => [])
-        const component = mount(<Content />);
-        expect(filterFilm).toHaveBeenCalled();
+    it('should be render correctly with SEARCH', () => {
+        let foundFilms = jest.fn();
+        const component = mount(
+            <Content view={BRIEFLY} popular={[]} loadPopularFilms={foundFilms} />
+        );
+        expect(foundFilms).toHaveBeenCalled();
         expect(component).toMatchSnapshot();
     });
 
-    it('should be render correctly with films', () => {
-        const component = mount(<Content />);
-        expect(filterFilm).toHaveBeenCalled();
+    it('should be render correctly with DETAIL INFO', () => {
+        let foundFilms = jest.fn();
+        const component = mount(<Content view={DETAIL} popular={[]} loadPopularFilms={foundFilms} />);
+        expect(foundFilms).toHaveBeenCalled();
         expect(component).toMatchSnapshot();
-    });
-
-    it('should call moreDetail() and changeView()', () => {
-        const component = mount(<Content />);
-        expect(component.state().view).toEqual('briefly');
-        expect(component.state().detailFilm).toBeNull();
-
-        component.find('#filmItem1').simulate('click');
-        expect(component.state().view).toEqual('detail');
-        expect(component.state().detailFilm).toEqual(testFilm);
-
-        component.find('div#detailInfo1').simulate('click');
-        expect(component.state().view).toEqual('briefly');
-        expect(component.state().searchType).toEqual('title');
-        expect(component.state().searchValue).toEqual('');
-        expect(component.state().detailFilm).toBeNull();
     });
 
     it('should be render correctly with ErrorBoundary', () => {
         console.error = jest.fn();
         console.log = jest.fn();
-        FilmItem.mockImplementation(() => {
+        let foundFilms = jest.fn();
+        FilmList.mockImplementationOnce(() => {
             throw new Error('New Error');
         });
-        const component = mount(<Content />);
-        expect(FilmItem).toThrow();
+        const component = mount(<Content view={BRIEFLY} popular={[]} loadPopularFilms={foundFilms} />);
+        expect(foundFilms).toHaveBeenCalled();
         expect(component).toMatchSnapshot();
+    });
+
+    it('should not be call loadPopularFilms()', () => {
+        let foundFilms = jest.fn();
+        mount(<Content view={DETAIL} popular={films} loadPopularFilms={foundFilms} />);
+        expect(foundFilms).not.toHaveBeenCalled();
     });
 });

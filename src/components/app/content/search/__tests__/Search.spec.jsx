@@ -1,33 +1,24 @@
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import React from 'react';
 import Search from '../Search';
 
 describe('Search component', () => {
     it('should be render correctly', () => {
-        const component = mount(<Search />);
+        const component = shallow(<Search />);
         expect(component).toMatchSnapshot();
     });
 
-    it('should call onSearch()', () => {
-        const filtering = jest.fn();
-        const component = mount(<Search onSearch={filtering} />);
-        component.find('button.search-button-group__search').simulate('click');
-        expect(filtering).toHaveBeenCalled();
+    it('should call search() onSumbit', () => {
+        const search = jest.fn();
+        const component = mount(<Search search={search} />);
+        component.find('button.search__button-search').simulate('submit');
+        expect(search).toHaveBeenCalled();
     });
 
-    it('should change state searchValue onInput', () => {
-        const component = mount(<Search />);
-        expect(component.state().searchValue).toEqual('');
-        component.find('input.search__film-input').simulate('input', { target: { value: 'Hello' } });
-        expect(component.state().searchValue).toEqual('Hello');
-    });
-
-    it('should change state searchType onClick', () => {
-        const component = mount(<Search />);
-        expect(component.state().searchType).toEqual('title');
-        component.find('button.search-button-group__genre').simulate('click');
-        expect(component.state().searchType).toEqual('genre');
-        component.find('button.search-button-group__title').simulate('click');
-        expect(component.state().searchType).toEqual('title');
+    it('should change searchValue onInput', () => {
+        const changeSearchValue = jest.fn();
+        const component = shallow(<Search changeSearchValue={changeSearchValue} />);
+        component.find('.search__film-input').simulate('change', { target: { value: 'Hello' } });
+        expect(changeSearchValue).toHaveBeenCalledWith('Hello');
     });
 });

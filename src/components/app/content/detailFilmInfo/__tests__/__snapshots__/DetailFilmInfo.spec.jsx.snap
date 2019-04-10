@@ -4,16 +4,38 @@ exports[`DetailFilmInfo component should be render correctly 1`] = `
 <_default
   film={
     Object {
-      "description": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
       "duration": "111",
-      "genre": "Action & Adventure",
+      "genres": Array [
+        "Action",
+        "Adventure",
+      ],
       "id": "1",
-      "logo": "kill-bill-v1.jpg",
-      "rating": "8.1",
+      "overview": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+      "poster_path": "kill-bill-v1.jpg",
+      "release_date": "2003",
       "title": "Kill Bill vol 1",
-      "year": "2003",
+      "vote_average": "8.1",
     }
   }
+  loadFoundedFilms={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "genre": "Action",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  setBrieflyMode={[MockFunction]}
+  showPopularFilms={[MockFunction]}
 >
   <div
     className="detail-film-info content__detail-film-info d-flex justify-content-around flex-wrap flex-md-row flex-column align-items-center align-self-center"
@@ -39,11 +61,13 @@ exports[`DetailFilmInfo component should be render correctly 1`] = `
       className="detail-film-info__image"
     >
       <_default
+        alt="Kill Bill vol 1"
         logo="kill-bill-v1.jpg"
       >
         <img
+          alt="Kill Bill vol 1"
           className="film-item__film-image"
-          src="test-file-stub"
+          src="kill-bill-v1.jpg"
         />
       </_default>
     </div>
@@ -71,7 +95,6 @@ exports[`DetailFilmInfo component should be render correctly 1`] = `
           2003
         </p>
         <p>
-          111
            min
         </p>
       </div>
