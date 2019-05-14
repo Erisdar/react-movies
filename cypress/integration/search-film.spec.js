@@ -16,6 +16,8 @@ describe('Content component', () => {
         cy.get('[data-cy=search]')
             .click();
 
+        cy.wait(500);
+
         cy.get('[data-cy=film-info-title]')
             .each((value) => {
                 expect(value).to.contain(film);
@@ -33,6 +35,8 @@ describe('Content component', () => {
 
         cy.get('[data-cy=search]')
             .click();
+
+        cy.wait(500);
 
         cy.get('[data-cy=film-info-genre]')
             .each((value) => {

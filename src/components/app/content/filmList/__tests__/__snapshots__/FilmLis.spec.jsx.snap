@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Film List should be render correctly with ContentLoader 1`] = `
+<_default
+  films={Array []}
+  loadingFlag={true}
+>
+  <div
+    className="film-list content__film-list align-self-center d-flex flex-row justify-content-around flex-wrap"
+  >
+    <_default>
+      <div
+        className="content__loader"
+      />
+    </_default>
+  </div>
+</_default>
+`;
+
+exports[`Film List should be render correctly with films 1`] = `
+<_default
+  films={
+    Array [
+      Object {
+        "duration": "111",
+        "genres": Array [
+          "Action",
+          "Adventure",
+        ],
+        "id": "1",
+        "overview": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+        "poster_path": "kill-bill-v1.jpg",
+        "release_date": "2003",
+        "title": "Kill Bill vol 1",
+        "vote_average": "8.1",
+      },
+    ]
+  }
+  loadingFlag={false}
+>
+  <div
+    className="film-list content__film-list align-self-center d-flex flex-row justify-content-around flex-wrap"
+  >
+    <_default
+      film={
+        Object {
+          "duration": "111",
+          "genres": Array [
+            "Action",
+            "Adventure",
+          ],
+          "id": "1",
+          "overview": "The lead character, called 'The Bride', was a member of the Deadly Viper Assassination Squad, led by her lover 'Bill.' Upon realizing she was pregnant with Bill's child, 'The Bride' decided to escape her life as a killer. She fled to Texas, met a young man, who, on the day of their wedding rehearsal was gunned down by an angry and jealous Bill (with the assistance of the Deadly Viper Assassination Squad). Four years later, 'The Bride' wakes from a coma, and discovers her baby is gone. She, then, decides to seek revenge upon the five people who destroyed her life and killed her baby. The saga of Kill Bill Volume I begins.",
+          "poster_path": "kill-bill-v1.jpg",
+          "release_date": "2003",
+          "title": "Kill Bill vol 1",
+          "vote_average": "8.1",
+        }
+      }
+      key="1"
+      moreDetail={[Function]}
+    >
+      <div
+        className="film-item film-list__film-item d-flex flex-column justify-content-start"
+      >
+        <div
+          className="logo-container film-item__logo-container"
+          onClick={[Function]}
+        >
+          <ImageErrorBoundary>
+            <_default
+              alt="Kill Bill vol 1"
+              logo="kill-bill-v1.jpg"
+            >
+              <img
+                alt="Kill Bill vol 1"
+                className="film-item__film-image"
+                src="kill-bill-v1.jpg"
+              />
+            </_default>
+          </ImageErrorBoundary>
+        </div>
+        <_default
+          genres="Action, Adventure"
+          title="Kill Bill vol 1"
+          year={2003}
+        >
+          <div
+            className="d-flex flex-column h-100 justify-content-between film-info film-item__film-info"
+          >
+            <div
+              className="d-flex justify-content-between align-items-start"
+            >
+              <p
+                className="film-info__title"
+                data-cy="film-info-title"
+              >
+                Kill Bill vol 1
+              </p>
+              <p
+                className="fiml-info__year"
+              >
+                2003
+              </p>
+            </div>
+            <div
+              className="h-50"
+            >
+              <p
+                className="film-info__genre"
+                data-cy="film-info-genre"
+              >
+                Action, Adventure
+              </p>
+            </div>
+          </div>
+        </_default>
+      </div>
+    </_default>
+  </div>
+</_default>
+`;
+
+exports[`Film List should be render correctly with films not found 1`] = `
+<_default
+  films={Array []}
+  loadingFlag={false}
+>
+  <div
+    className="film-list content__film-list align-self-center d-flex flex-row justify-content-around flex-wrap"
+  >
+    <_default>
+      <p
+        className="film-list__no-films"
+      >
+        No Films Found
+      </p>
+    </_default>
+  </div>
+</_default>
+`;

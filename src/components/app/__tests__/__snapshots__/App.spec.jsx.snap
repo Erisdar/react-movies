@@ -3,7 +3,7 @@
 exports[`AppContainer component should be render correctly 1`] = `
 <Fragment>
   <_default />
-  <Content />
+  <ConnectFunction />
   <_default />
 </Fragment>
 `;

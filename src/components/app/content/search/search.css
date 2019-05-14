@@ -6,3 +6,12 @@
     padding: 15px 20%;
     height: auto;
 }
+
+.search__button-group {
+    margin-top: 30px;
+}
+
+.search__button-title,
+.search__button-genres {
+    margin-left: 20px;
+}

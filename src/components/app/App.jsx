@@ -1,17 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import ReactDom from 'react-dom';
 import './app.css';
-import Content from './content/Content';
+import Content from './content/ContentContainer';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 
-export const App = () => (
+export default () => (
     <>
         <Header />
         <Content />
         <Footer />
     </>
 );
-
-ReactDom.render(<App />, document.getElementsByClassName("app")[0]);

@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     context: path.join(__dirname, 'src'),
-    entry: './components/app/App.jsx',
+    entry: './index.jsx',
 
     output: {
         filename: 'bundle.js',
@@ -17,7 +17,11 @@ module.exports = {
             img: path.join(__dirname, 'src', 'img'),
             util: path.join(__dirname, 'src', 'util'),
             error: path.join(__dirname, 'src', 'components', 'error'),
-            app: path.join(__dirname, 'src', 'components', 'app')
+            app: path.join(__dirname, 'src', 'components', 'app'),
+            constants: path.join(__dirname, 'src', 'constants'),
+            actions: path.join(__dirname, 'src', 'actions'),
+            config: path.join(__dirname, 'src', 'config'),
+            reducers: path.join(__dirname, 'src', 'reducers')
         },
         extensions: ['.js', '.jsx']
     },

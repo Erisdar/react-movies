@@ -8,9 +8,9 @@ export default ({ film, moreDetail }) => (
     <div className="film-item film-list__film-item d-flex flex-column justify-content-start" >
         <div className="logo-container film-item__logo-container" onClick={() => moreDetail()}>
             <ImageErrorBoundary>
-                <FilmImage logo={film.logo} alt={film.title} />
+                <FilmImage logo={film.poster_path} alt={film.title} />
             </ImageErrorBoundary>
         </div>
-        <FilmInfo title={film.title} year={film.year} genre={film.genre} />
+        <FilmInfo title={film.title} year={new Date(film.release_date).getFullYear()} genres={film.genres.join(', ')} />
     </div>
 );
