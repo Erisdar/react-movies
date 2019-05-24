@@ -4,5 +4,5 @@ import { TITLE } from 'constants/searchType';
 import { handleAction, combineActions } from 'redux-actions';
 
 export default handleAction(combineActions(setSearchTypeTitle, setSearchTypeGenre), {
-    next: (state, { payload }) => payload,
+  next: (state, {payload}) => payload,
 }, TITLE);

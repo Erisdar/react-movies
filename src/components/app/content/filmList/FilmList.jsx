@@ -1,14 +1,14 @@
 import React from 'react';
 import ContentLoader from './contentLoader/ContentLoader';
-import FilmItem from './filmItem/FilmItem';
+import FilmItemContainer from './filmItem/FilmItemContainer';
 import './filmList.css';
 import NoFilms from './noFilms/NoFilms';
 
-export default ({ films, loadingFlag, setDetailMode }) => {
+export default ({ films, loadingFlag }) => {
 
     let filmsComponent = (films.length > 0)
         ? <>
-            {films.map((film) => <FilmItem film={film} key={film.id} moreDetail={() => setDetailMode(film)} />)}
+            {films.map((film) => <FilmItemContainer film={film} key={film.id} />)}
         </>
         : <NoFilms />
 

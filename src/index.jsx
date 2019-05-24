@@ -6,10 +6,10 @@ import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/app/App';
 
 render(
-    <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-            <App />
-        </PersistGate>
-    </Provider>,
-    document.getElementsByClassName("app")[0]
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <App/>
+    </PersistGate>
+  </Provider>,
+  document.getElementsByClassName("app")[0]
 )

@@ -53,6 +53,9 @@ dist
 # Ignore vscode
 .vscode/launch.json
 
+# Ignore idea
+.idea/
+
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test

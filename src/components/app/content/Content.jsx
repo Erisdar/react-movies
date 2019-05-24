@@ -1,7 +1,7 @@
-import { BRIEFLY } from 'constants/view';
 import ErrorBoundary from 'error/ErrorBoundary';
 import React, { PureComponent } from 'react';
-import DetailFilmInfo from './detailFilmInfo/DetailFilmInfoContainer'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import DetailFilmInfo from './detailFilmInfo/DetailFilmInfoContainer';
 import FilmList from './filmList/FilmListContainer';
 import SearchContainer from './search/SearchContainer';
 
@@ -15,16 +15,16 @@ export default class Content extends PureComponent {
 
     render() {
         return (
-            <div className="content d-flex flex-column mb-auto">
-                {
-                    this.props.view === BRIEFLY
-                        ? <SearchContainer />
-                        : <DetailFilmInfo />
-                }
+            <Router className="content d-flex flex-column mb-auto">
+                <Switch>
+                    <Route exact path="/" component={SearchContainer} />
+                    <Route path="/film/:filmId" component={DetailFilmInfo} />
+                    <Redirect to='/' />
+                </Switch>
                 <ErrorBoundary>
                     <FilmList />
                 </ErrorBoundary>
-            </div>
+            </Router>
         );
     };
 };
