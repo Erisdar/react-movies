@@ -1,6 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -9,7 +9,8 @@ module.exports = {
 
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     resolve: {
         alias: {
@@ -21,7 +22,8 @@ module.exports = {
             constants: path.join(__dirname, 'src', 'constants'),
             actions: path.join(__dirname, 'src', 'actions'),
             config: path.join(__dirname, 'src', 'config'),
-            reducers: path.join(__dirname, 'src', 'reducers')
+            reducers: path.join(__dirname, 'src', 'reducers'),
+            selectors: path.join(__dirname, 'src', 'selectors')
         },
         extensions: ['.js', '.jsx']
     },
@@ -58,6 +60,7 @@ module.exports = {
         compress: true,
         port: 8080,
         open: true,
-        hot: true
+        hot: true,
+        historyApiFallback: true
     }
 };

@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import Content from './Content';
 
 function mapStateToProps(state) {
-    let { view } = state.viewMode;
     let { popular } = state.films;
-    return { view, popular }
+    return { popular }
 };
 
 const mapDispatchToProps = {

@@ -1,6 +1,14 @@
-import { addFoundedFilms, addPopularFilms, setFilmsLoadingFalse, setFilmsLoadingTrue, showFoundedFilms, showPopularFilms } from 'actions';
+import {
+    addFoundedFilms,
+    addPopularFilms,
+    setDetailFilm,
+    setFilmsLoadingFalse,
+    setFilmsLoadingTrue,
+    showFoundedFilms,
+    showPopularFilms
+} from 'actions';
 import axios from 'axios';
-import { LOAD_FILMS } from 'constants/api';
+import {LOAD_FILMS} from 'constants/Api';
 
 const loadFilms = (addFilms, setShowingFilmsFlag, { sortBy = 'vote_average', sortOrder = 'desc', limit = 50, genre, search, searchBy }) => dispatch => {
     dispatch(setFilmsLoadingTrue());
@@ -31,9 +39,20 @@ export const loadPopularFilms = () => dispatch => {
 }
 
 export const loadFoundedFilms = ({ genre, searchType, searchValue }) => dispatch => {
-    if (searchValue == '') {
+    if (searchValue === '') {
         dispatch(showPopularFilms());
     } else {
         return dispatch(loadFilms(addFoundedFilms, showFoundedFilms, { genre, searchBy: searchType, search: searchValue, limit: 20 }));
     }
 };
+
+export const loadFilmById = filmId => dispatch => {
+    return axios.get(`${LOAD_FILMS}/${filmId}`)
+        .then(result => {
+            dispatch(setDetailFilm(result.data));
+            return result.data;
+        })
+        .catch(() => {
+            dispatch(setDetailFilm({}));
+        })
+}
